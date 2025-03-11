@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rock,paper,scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Stone Paper Scissors</h1>
+        
+        <div class="score-board">
+            <div class="win-goal">First to score 3 wins!</div>
+            <div>
+                <p>You</p>
+                <p class="score" id="user-score">0</p>
+            </div>
+            <div>
+                <p>Computer</p>
+                <p class="score" id="computer-score">0</p>
+            </div>
+            
+            <div class="streak-indicator" id="streak-indicator"></div>
+            <div class="score-progress player" id="player-progress"></div>
+            <div class="score-progress computer" id="computer-progress"></div>
+        </div>
+        
+        <div id="match-winner" class="match-winner">
+            <div class="winner-message">
+                <h2 id="winner-title">Match Complete!</h2>
+                <p id="winner-text">Happy Birthday Preet!</p>
+                <button id="new-match-btn" class="new-match-btn">New Match</button>
+            </div>
+        </div>
+        
+        <div class="result-container">
+            <div class="result" id="result">Choose your weapon!</div>
+        </div>
+        
+        <div class="battle-area">
+            <div class="player-choice" id="player-display">
+                <div class="player-label">You</div>
+            </div>
+            <div class="vs-text">VS</div>
+            <div class="computer-choice" id="computer-display">
+                <div class="computer-label">Computer</div>
+            </div>
+        </div>
+        
+        <div class="choices">
+            <button class="choice" id="stone" data-choice="stone">
+                <span>✊</span>
+            </button>
+            <button class="choice" id="paper" data-choice="paper">
+                <span>✋</span>
+            </button>
+            <button class="choice" id="scissors" data-choice="scissors">
+                <span>✌️</span>
+            </button>
+        </div>
+        
+        <p class="message" id="message">Make your move.</p>
+        
+        <button class="reset" id="reset-button">Reset Game</button>
+        
+        <div class="game-history" id="game-history">
+            <h3>Game History</h3>
+            <div class="history-header">
+                <span>Round</span>
+                <span>You</span>
+                <span>Computer</span>
+                <span>Result</span>
+            </div>
+            <div id="history-items"></div>
+        </div>
+    </div>
+    <script src="rps.js"></script>
+</body>
+</html>
